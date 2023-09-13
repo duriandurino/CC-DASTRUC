@@ -3,7 +3,7 @@ class Stack{
         this.items = []
         this.count = 0
     }
-
+    //convert java
     push(element){
         this.items[this.count] = element
         console.log(`${element} is added to ${this.count}`)
