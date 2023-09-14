@@ -57,7 +57,7 @@ class Stack{
 const stack = new Stack()
 
 stack.push(1115)
-stack.push(123)
+stack.push(143)
 stack.push(92803)
 
 console.log(stack.printStack())
