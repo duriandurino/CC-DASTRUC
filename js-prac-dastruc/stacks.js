@@ -58,7 +58,7 @@ const stack = new Stack()
 
 stack.push(1115)
 stack.push(143)
-stack.push(92803)
+stack.push(2003)
 
 console.log(stack.printStack())
 stack.clear()

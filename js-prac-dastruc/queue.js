@@ -43,7 +43,7 @@ class Queue{
 const queue = new Queue()
 
 queue.enqueue(15)
-queue.enqueue(28)
+queue.enqueue(19)
 queue.enqueue(3)
 queue.enqueue(143)
 

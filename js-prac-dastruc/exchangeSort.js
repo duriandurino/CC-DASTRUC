@@ -16,7 +16,7 @@ function bubbleSort(array){
     }while(swapped)
 }
 
-const array = [11,15,3,9,28]
+const array = [11,15,3,9,16]
 
 bubbleSort(array)
 
