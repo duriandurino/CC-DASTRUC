@@ -2,12 +2,15 @@ class insertion{
     public static void main(String[] args){
         int[] arr = {60, 320, 7, 380, 110, 11, 10, 8};
 
+        int counter=0;
         for(int i=1; i<arr.length;i++){//AHAHAHAH wtf nakuha nako lesgo
             int tmp = arr[i];
             int count=0;
             boolean sort = false;
             //System.out.println("i before : "+arr[i]);
             for(int j=i-1;j<i&&j>=0;j--){
+                counter++;
+                System.out.println("Iterations: "+counter);
                 //System.out.println("j before : "+arr[j]);
                 if(tmp<arr[j]){
                     arr[j+1]=arr[j];
