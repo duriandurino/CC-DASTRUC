@@ -6,12 +6,12 @@ class insertion{
             int tmp = arr[i];
             int count=0;
             boolean sort = false;
-            System.out.println("i before : "+arr[i]);
+            //System.out.println("i before : "+arr[i]);
             for(int j=i-1;j<i&&j>=0;j--){
-                System.out.println("j before : "+arr[j]);
+                //System.out.println("j before : "+arr[j]);
                 if(tmp<arr[j]){
                     arr[j+1]=arr[j];
-                    System.out.println("j after : "+arr[j]);
+                    //System.out.println("j after : "+arr[j]);
                     sort = true;
                     count++;
                 } 
@@ -19,7 +19,11 @@ class insertion{
             if(sort==true){
                 arr[i-count]=tmp;
             }
-            System.out.println("i after : "+arr[i]);
+            //System.out.println("i after : "+arr[i]);
+            System.out.println("\n"+i+"-array while sorted: ");
+            for(int k=0; k<arr.length;k++){
+                System.out.print(+arr[k]+" ");
+            }
         }
 
         System.out.println();
