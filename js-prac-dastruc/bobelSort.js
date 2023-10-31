@@ -1,22 +1,22 @@
 function bubbleSort(array){
-    let swapped
+    let swapped;
     do{
-        swapped = false
+        swapped = false;
         for(let i = 0; i < array.length - 1; i++){
             if(array[i] > array[i+1]){
 
-                let tmp = array[i]
+                let tmp = array[i];
 
-                array[i] = array[i+1]
-                array[i+1] = tmp
+                array[i] = array[i+1];
+                array[i+1] = tmp;
 
-                swapped = true
+                swapped = true;
             }
         }
-    }while(swapped)
+    }while(swapped);
 }
 
-const array = [11,15,3,9,19]
+const array = [11,15,3,9,19];
 
 bubbleSort(array)
 
