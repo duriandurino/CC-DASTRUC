@@ -10,6 +10,7 @@ public class LinkedList {
             System.out.print(traverse.data+" -> ");
             traverse=traverse.next;
         }
+        System.out.println("null");
         System.out.println();
     }
 
