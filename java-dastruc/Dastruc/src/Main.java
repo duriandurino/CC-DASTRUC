@@ -15,16 +15,23 @@ public class Main{
         }
         System.out.println("Choose an action:");
         a = sc.nextInt();
-        switch(a-1){
+        switch(a){
             case 1:
                 UserIn();
                 ll.Display();
                 break;
             case 2:
-                ll.DelDupe();
-                ll.Display();
+                if(ll.head!=null){
+                    ll.DelDupe();
+                    ll.Display();
+                }else{
+                    System.out.println("Nodes are empty");
+                }
                 break;
             case 3:
+                if(ll.head!=null){
+
+                }
                 break;
             case 4:
                 loop = false;

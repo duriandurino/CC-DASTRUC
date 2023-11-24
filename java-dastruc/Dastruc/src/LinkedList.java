@@ -55,7 +55,7 @@ public class LinkedList {
                 }
             }
             if(!duped){
-                //System.out.println("added on array:"+traverse.data);
+                //System.out.println("idasok sa array:"+traverse.data);
                 arr[x] = traverse.data;
             }
             else{
@@ -78,5 +78,7 @@ public class LinkedList {
         return isEmpty;
     }
 
+    void MidNode(){
 
+    }
 }
