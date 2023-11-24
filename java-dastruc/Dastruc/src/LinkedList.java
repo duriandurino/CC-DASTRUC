@@ -1,22 +1,24 @@
 public class LinkedList {
     Node head;
     private int count = 0;
-    void display(){
+    void Display(){
         System.out.println("Current Nodes:");
-        while(head != null){
-            System.out.print(head.data+" -> ");
-            head=head.next;
+
+        Node traverse = head;
+
+        while(traverse != null){
+            System.out.print(traverse.data+" -> ");
+            traverse=traverse.next;
         }
         System.out.println();
     }
 
-    void addData(int data){
+    void AddData(int data){
         Node newNode = new Node(data);
 
         if(head == null){
             newNode.next = head;
             head = newNode;
-            count++;
         }
         else{
             Node getLast = head;
@@ -26,39 +28,54 @@ public class LinkedList {
             }
 
             getLast.next = newNode;
-            count++;
         }
+        this.count++;
     }
 
-    void delDupe(){
+    boolean DelDupe(){
         int[] arr = new int[count];
         int x = 0;
+        boolean isEmpty = true;
 
         Node traverse = head;
-        Node prev = null;
-        System.out.println("dfsdfsdfsdfsdv");
-        while(head != null){
-            System.out.println("1st loop");
+        Node del = null;
+        Node newNext = null;
+        //System.out.println("dfsdfsdfsdfsdv");
+        while(traverse != null){
+            isEmpty = false;
+            Node prev = head;
+            boolean duped = false;
+
+            //System.out.println(x+" loop data:"+traverse.data);
             for(int i=0; i<count;i++){
                 if(traverse.data== arr[i]){
-                    System.out.println("1st loop break");
+                    //System.out.println("duped not added on array");
+                    duped = true;
                     break;
                 }
-                System.out.println("1st loop"+traverse.data);
-                arr[i] = traverse.data;
             }
-
-            for(int j = 0; j<count; j++){
-                System.out.println("2nd loop");
-                if(traverse.data==arr[j]&&x>0&&traverse.next!=null){
-                    prev = traverse;
-                    traverse = traverse.next;
-                    this.count--;
+            if(!duped){
+                //System.out.println("added on array:"+traverse.data);
+                arr[x] = traverse.data;
+            }
+            else{
+                for(int i=1;i<x;i++){
+                    //System.out.println("aim:"+i);
+                    prev = prev.next;
+                    //System.out.println("prev:"+prev.data);
                 }
+
+                del = prev.next;
+                newNext = del.next;
+                prev.next = newNext;
+                count--;
+                x--;
             }
+            traverse = traverse.next;
+            //display();
             x++;
-            prev.next = traverse.next;
         }
+        return isEmpty;
     }
 
 
