@@ -32,17 +32,15 @@ public class LinkedList {
         this.count++;
     }
 
-    boolean DelDupe(){
+    void DelDupe(){
         int[] arr = new int[count];
         int x = 0;
-        boolean isEmpty = true;
 
         Node traverse = head;
         Node del = null;
         Node newNext = null;
         //System.out.println("dfsdfsdfsdfsdv");
         while(traverse != null){
-            isEmpty = false;
             Node prev = head;
             boolean duped = false;
 
@@ -75,7 +73,6 @@ public class LinkedList {
             //display();
             x++;
         }
-        return isEmpty;
     }
 
     void MidNode(){
