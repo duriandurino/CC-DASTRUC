@@ -77,6 +77,11 @@ public class LinkedList {
     }
 
     void MidNode(){
+        Node traverse = head;
 
+        for(int i=0; i<count/2;i++){
+            traverse = traverse.next;
+        }
+        System.out.println("Middle Node: "+traverse.data);
     }
 }
