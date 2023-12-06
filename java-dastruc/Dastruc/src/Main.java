@@ -30,7 +30,7 @@ public class Main{
                 break;
             case 3:
                 if(ll.head!=null){
-
+                    ll.MidNode();
                 }
                 break;
             case 4:
